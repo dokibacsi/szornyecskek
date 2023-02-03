@@ -1,0 +1,75 @@
+
+body{
+    background-color: rgb(26, 25, 25);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main, header, nav, article, div, section{
+    border: 1px solid lightgrey;
+}
+
+nav a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffcc66;
+    text-align: center;
+    background: #339900;
+    padding: 5px;
+    display: inline-block;
+    width: 150px;
+}
+
+nav a:hover{
+    background-color: #66cc00;
+    color: #ff3300;
+}
+
+#aktiv{
+    color: #ffff33;
+    background: #66cc00;
+}
+
+#aktiv:hover{
+    color: #ff3300;
+    background: #66cc00;
+}
+/*Első példa: */
+article{
+    padding: 5px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 110px 110px 110px 110px;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    /*grid-template-columns: auto auto auto auto;*/
+}
+
+/*article div:nth-child(1){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}*/
+/* Másfajta rövidítés 
+article div:nth-child(2){
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}*/
+
+article div:nth-child(6) { 
+    grid-column: 2 / span 4; 
+    grid-row: 1 /2; 
+    }
+
+article div{
+    text-align: center;
+    color: lightgrey;
+}
+
+main h1{
+    padding: 10px; 
+    color: #339900;
+}
